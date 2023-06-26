@@ -1,0 +1,19 @@
+mkdir /var/apps
+cd /var/apps
+
+mkdir DOMAIN_NAME
+cd DOMAIN_NAME/
+
+touch docker-compose.
+
+mkdir volumes
+
+cd volumes/
+mkdir etc build
+etc - директория с конфигурационными файлами сервисов;
+
+mkdir etc/nginx etc/mysql etc/php-fpm8.1
+mkdir etc/nginx/sites-enabled etc/nginx/ssl etc/mysql/conf.d etc/php-fpm8.1/fpm.pool.d
+touch etc/nginx/nginx.conf etc/nginx/sites-enabled/DOMAIN_NAME.conf etc/mysql/conf.d/config-file.cnf etc/php-fpm8.1/php.ini etc/php-fpm8.1/fpm.pool.d/domain.conf
+mkdir build/nginx build/php-fpm8.1 build/mysql
+touch build/nginx/Dockerfile build/php
